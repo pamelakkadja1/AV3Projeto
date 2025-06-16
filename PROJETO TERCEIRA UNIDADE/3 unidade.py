@@ -3,7 +3,7 @@ from validacoes.validacaocadastro import validar_se_o_email_ja_ta_registrado
 from validacoes.validacaocadastro import validar_email
 from validacoes.validacaocadastro import validar_senha
 from validacoes.cadastrocarona import validar_placa_do_veiculo
-from validacoes.cadastrocarona import login_do_usuario
+from validacoes.validacaologin import login_do_usuario
 from validacoes.cadastrocarona import validar_vaga
 from validacoes.cadastrocarona import validar_valor_por_vaga
 from validacoes.cadastrocarona import validar_horario_carona
@@ -13,7 +13,7 @@ from caronas.listarcarona import listagem_carona
 from validacoes.procuradedata import procura_de_data01
 from caronas.encontrarcarona import encontrar_origem_destino
 from caronas.encontrarcarona import reservar_carona
-from caronas.encontrarcarona import encontrar_por_data
+from caronas.encontrarcarona import encontar_por_data
 from caronas.removercarona import remover_carona
 from caronas.removerreserva import remover_reserva
 from usuario.avaliacao import avaliacoes_de_motorista
@@ -240,8 +240,7 @@ while True:
                                 "nota":nota})
             elif(opcao2=="10"):
                 if(emaildomotorista==usuariologado):
-                    if(emaildomotorista==usuariologado):
-                        with open("relatorio.txt","a") as arquivorelatorio:
-                            arquivorelatorio.write(cadastrodecarona)
+                    with open("relatorio.txt","a") as arquivorelatorio:
+                        arquivorelatorio.write(cadastrodecarona)
                     
             
